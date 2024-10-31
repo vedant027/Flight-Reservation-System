@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            background-color: #f0f4f8; /* Light gray-blue background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+        }
+
+        form {
+            background-color: #ffffff; /* Solid white background for the form */
+            padding: 40px 35px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            width: 400px; /* Increased width for better layout */
+            transition: all 0.3s ease; /* Smooth transition */
+        }
+
+        form:hover {
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+        }
+
+        h2 {
+            color: #002147; /* Navy blue for the title */
+            font-size: 1.8rem; /* Slightly larger title */
+            text-align: center;
+            margin-bottom: 25px;
+            font-weight: bold; /* Bold title for emphasis */
+        }
+
+        table {
+            width: 100%;
+            color: #555; /* Darker text for better readability */
+        }
+
+        td {
+            padding: 10px 0; 
+            text-align: left;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: border-color 0.3s; /* Smooth border transition */
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            border-color: #007bff; /* Blue border on focus */
+            outline: none; /* Remove outline */
+        }
+
+        input[type="submit"],
+        .signin-button {
+            width: 48%; /* Adjusted width to fit both buttons */
+            padding: 12px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Smooth background transition */
+            font-weight: bold; /* Bold button text */
+        }
+
+        input[type="submit"] {
+            background-color: #28a745; /* Green for submit */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+
+        .signin-button {
+            background-color: #007bff; /* Blue for sign-in */
+        }
+
+        .signin-button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        .button-container {
+            display: flex; /* Use flexbox to align buttons side by side */
+            justify-content: space-between; /* Space between buttons */
+            margin-top: 20px; /* Space above the button container */
+        }
+    </style>
+</head>
+<body>
+    <form action="SignInServlet" method="post">
+        <h2>Login Form</h2>
+        <table>
+            <tr>
+                <td>Enter Email:</td>
+                <td><input type="text" name="em" required /></td>
+            </tr>
+            <tr>
+                <td>Enter Password:</td>
+                <td><input type="password" name="pass" required /></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div class="button-container">
+                        <input type="submit" value="Login" />
+                        <input type="button" value="Sign Up" class="signin-button" onclick="window.location.href='signup.html'" />
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Form</title>
+</head>
+<body>
+	<form action="SignInServlet" method="post">
+		<table style="background-color: lightgrey; margin: auto">
+			<tr>
+				<td>Enter User Email</td>
+				<td><input type="text" name="em" /></td>
+			</tr>
+			<tr>
+				<td>Enter Password</td>
+				<td><input type="password" name="pass" /></td>
+			</tr>
+
+			<tr>
+				<td><input type="submit" value="Login" /></td>
+			</tr>
+		</table>
+	</form>
+</html> 
+ -->
